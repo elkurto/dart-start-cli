@@ -27,12 +27,26 @@
 
 ```
 
+### 000_hello.dart
+- print, use cmdline args, List<String> and List.join(",")
+
+```bash
+  cd ./aaa_dart_cli/bin/
+  dart 000_hello.dart a b c
+  
+    # output :
+    #   Hello a, b, c
+
+```
+
 ### ./aaa_dart_cli/bin/001_dart_cli.dart
 - a program that reads positional command-line-args into an array
 ```bash
-dart ./aaa_dart_cli/bin/001_dart_cli.dart  a b c 
+  cd ./aaa_dart_cli/bin/
+  dart 001_dart_cli.dart  a b c 
 
-  # output :
-  #  Positional arguments: [a, b, c]
+    # output :
+    #  Positional arguments: [a, b, c]
 
 ```
+
