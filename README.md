@@ -27,3 +27,12 @@
 
 ```
 
+### ./aaa_dart_cli/bin/001_dart_cli.dart
+- a program that reads positional command-line-args into an array
+```bash
+dart ./aaa_dart_cli/bin/001_dart_cli.dart  a b c 
+
+  # output :
+  #  Positional arguments: [a, b, c]
+
+```
