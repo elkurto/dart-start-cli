@@ -6,8 +6,8 @@ Future<void> main(List<String> args) async {
   longPressSleep(); // a synchronous wait
   longPressFuture(); // an async wait
 
-  Future<User> future_user00 = createFutureWithReturnValue(0);
-  future_user00.then((user00) => print("user00 =${user00.toString()}"));
+  Future<User> futureUser00 = createFutureWithReturnValue(0);
+  futureUser00.then((user00) => print("user00 =${user00.toString()}"));
 
   User user01 = await createFutureWithReturnValue(1);
   print("user01 =${user01.toString()}");
