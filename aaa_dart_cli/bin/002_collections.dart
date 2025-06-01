@@ -1,3 +1,4 @@
+import 'dart:collection';
 import 'dart:ffi';
 
 class ArgResult {
@@ -29,18 +30,43 @@ class ArgResult {
 }
 
 runListExample() {
-  print("\nrunListExample()");
+  print("\n runListExample() :::: ");
+
   List<int> list = [5, 7, 11, 13, 17, 19];
   list.add(23);
+
   int summation = list.reduce((val, elem) => val + elem);
   print("  ${list.join(" + ")} = $summation\n");
   // output:
   //   5 + 7 + 11 + 13 + 17 + 19 + 23 = 95
 }
 
-runSetExample() {}
+runSetExample() {
+  print("\n runSetExample() :::: ");
 
-runMapExample() {}
+  List<String> listString = <String>["a", "bb", "ccc", "dddd", "eeeee"];
+  Set<String> hashSet = HashSet.of(listString);
+
+  print("\n  hashSet ={");
+
+  for (String elem in hashSet) {
+    print("    elem =$elem ,");
+  }
+  print("  }");
+}
+
+runMapExample() {
+  print("\n runMapExample() ::::");
+  Map<String, int> hashMap = HashMap();
+  hashMap.addAll({"a": 1, "b": 2, "c": 3});
+
+  print("\n  hashMap ={");
+  for (String key in hashMap.keys) {
+    print("    $key = ${hashMap[key]}");
+  }
+  print("  })");
+}
+
 void main(List<String> args) {
   ArgResult argResult = ArgResult.parseArgs(args);
 
