@@ -80,3 +80,30 @@ void main(List<String> args) {
     runMapExample();
   }
 }
+
+/*
+dart bin/002_collections.dart list set map
+
+ runListExample() :::: 
+  5 + 7 + 11 + 13 + 17 + 19 + 23 = 95
+
+
+ runSetExample() :::: 
+
+  hashSet ={
+    elem =eeeee ,
+    elem =a ,
+    elem =bb ,
+    elem =ccc ,
+    elem =dddd ,
+  }
+
+ runMapExample() ::::
+
+  hashMap ={
+    c = 3
+    a = 1
+    b = 2
+  })
+
+ */
