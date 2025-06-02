@@ -1,4 +1,11 @@
-// 008_01_quirk_eq_final_const_list.dart
+/*
+  
+dart bin/008_01_quirk_eq_final_const_list.dart 
+final ::: [0, 1, 2] == [0, 1, 2]  is false
+const ::: [0, 1, 2] == [0, 1, 2]  is true
+const ::: [0, 1, 2] == [3, 4, 5]  is false
+
+ */
 
 void main(List<String> args) {
   final listFinal00 = [0, 1, 2];
