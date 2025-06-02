@@ -5,6 +5,8 @@ void main(List<String> args) {
   final listFinal01 = [0, 1, 2];
 
   // note:   (listFinal00 == listFinal01) === false
+  // :operator:== performs address equals on final List<int>
+  // so (listFinal00 == listFinal01) === false
   if (listFinal00 == listFinal01) {
     // does
     print("final ::: $listFinal00 == $listFinal01  is true");
@@ -17,7 +19,9 @@ void main(List<String> args) {
   const listConst01 = [0, 1, 2];
   const listConst02 = [3, 4, 5];
 
-  // note:   (listConst00 == listConst01) === false
+  // note:   (listConst00 == listConst01) === true
+  // :operator:== performs pairwise equal on const List<int>
+  // so (listConst00 == listConst01) === true
   if (listConst00 == listConst01) {
     // does
     print("const ::: $listConst00 == $listConst01  is true");
@@ -27,6 +31,8 @@ void main(List<String> args) {
   }
 
   // note:   (listConst00 == listConst02) === false
+  // :operator:== performs pairwise equal on const List<int>
+  // so (listConst00 == listConst02) === false
   if (listConst00 == listConst02) {
     // does
     print("const ::: $listConst00 == $listConst02  is true");
