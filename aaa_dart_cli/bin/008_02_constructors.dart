@@ -16,7 +16,7 @@ class ArgResult {
   ArgResult initFromListString(List<String> args) {
     String arg;
     for (int i =0 ; i < args.length; i++ ) {
-      print( "i =${i} and args[${i}] =${args[i]}");
+      
       arg =args[i];
       if ( arg.startsWith("-")) {
         
@@ -41,6 +41,19 @@ class ArgResult {
     return argResult;
   }
 
+  bool hasKey(String key) {
+    return mapNameArg.containsKey(key);
+  }
+
+  String? getVal(String key) {
+    String? val =null;
+    if ( hasKey(key)) {
+      val =mapNameArg[key];
+    }
+
+    return val;
+  }
+
   String toString() {
     StringBuffer sb =StringBuffer();
     for ( var key in mapNameArg.keys) {
@@ -50,8 +63,23 @@ class ArgResult {
   }
 }
 
+const USAGE ="""
+USAGE: 
+dart 008_02_constructors.dart -i aye -o oooot -a
+  // output:
+  argResult =
+    -a =
+    -o =oooot
+    -i =aye
+""";
 void main(List<String> args) {
   ArgResult argResult = ArgResult.fromListString(args);
-  print("argResult =\n${argResult.toString()}");
   
+  if (argResult.hasKey("-h")) {
+    print(USAGE);
+  }else {
+    print("argResult =\n${argResult.toString()}");
+  }
+
+
 }
