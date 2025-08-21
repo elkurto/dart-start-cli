@@ -16,6 +16,7 @@ void main() {
 
 /*
 Run with the command : 
+   cd aaa_dart_cli/bin/
    dart t00_unittest000.dart 
 
    Output:
@@ -24,4 +25,13 @@ Run with the command :
     00:00 +1: test-String test-endsWith
 
     00:00 +2: All tests passed!
+
+
+   or
+   
+   cd aaa_dart_cli/
+   dart test bin/t00_unittest000.dart
+
+   Output:
+     00:00 +2: All tests passed!     
  */
