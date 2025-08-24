@@ -6,7 +6,13 @@ void configLogger() {
 
   // configure a listener for :event:record
   Logger.root.onRecord.listen((record) {
-    print('${record.level.name}: ${record.time}: ${record.message}');
+    if (record.stackTrace == null) {
+      print('${record.level.name}: ${record.time}: ${record.message}');
+    } else {
+      print(
+        '${record.level.name}: ${record.time}: ${record.message} ${record.stackTrace}',
+      );
+    }
   });
 
   // optional -- listen for :event:levelChnaged
