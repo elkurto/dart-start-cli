@@ -24,3 +24,22 @@ main() {
     });
   });
 }
+
+/*
+Run: 
+  dart test/test_aba_singlton.dart 
+
+  Output
+    00:00 +0: test aba_singleton Singleton create
+
+    00:00 +1: test aba_singleton Cart:: add remvoe
+
+    00:00 +2: All tests passed!
+
+
+Run:
+  dart test test/test_aba_singlton.dart 
+  
+  Output:
+    00:00 +2: All tests passed!     
+*/
