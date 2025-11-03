@@ -36,6 +36,8 @@ class BookApi {
 
   // https://jsonplaceholder.typicode.com/guide/
   // https://jsonplaceholder.typicode.com/posts/1
+  //    - // returns a response.body ={ userid:1, id:1, title:"xx", body:"..."
+  //           }
   static Future<http.Response> pullFromTypicode() {
     var url = Uri.https("jsonplaceholder.typicode.com/", "posts/1");
     Future<http.Response> futureOfResponse = http.get(url);
